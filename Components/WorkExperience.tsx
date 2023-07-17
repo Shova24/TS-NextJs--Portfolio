@@ -7,7 +7,7 @@ function WorkExperience({}: Props) {
   return (
     <div className='relative flex flex-col items-center h-screen max-w-full px-10 mx-auto overflow-hidden text-left md:flex-row justify-evenly'>
         <h3 className='absolute top-24 uppercase tracking-[2px] text-gray-500 text-2xl'>WorkExperience</h3>
-        <div>
+        <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory">
             <ExperienceCard/>
             <ExperienceCard/>
             <ExperienceCard/>
