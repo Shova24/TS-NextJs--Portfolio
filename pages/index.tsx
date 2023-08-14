@@ -14,11 +14,7 @@ export default function Home() {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-mandatory overflow-scroll z-0">
       <Head>
-<<<<<<< HEAD
-        <title>Shova{`&apos;`}s Portfolio</title>
-=======
         <title>Shova&apos;s Portfolio</title>
->>>>>>> cfa1defbedb6ab1da5794c2604a34c5aee1f9e76
       </Head>
       {/* Header */}
       <Header />
