@@ -26,8 +26,8 @@ function About() {
       <div className="px-0 space-y-10 md:px-10">
         <h4 className="text-4xl font-semibold">Here is a <span className="underline decoration-[#F7AB0A]">little</span> background</h4>
         <p className="text-base">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nostrum, unde nam ex dolor mollitia labore atque asperiores maiores commodi corrupti, pariatur architecto est ipsum quas nesciunt expedita eligendi reiciendis!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nostrum, unde nam ex dolor mollitia labore atque asperiores maiores commodi corrupti, pariatur architecto est ipsum quas nesciunt expedita eligendi reiciendis!
+           Hello World !!! <br/>
+           I am Shova. Finished my BSc in Software Engineering from Daffodil International University with the CGPA of 3.97. My journey of programming began with C in my 2nd semester of varsity, where I started solving problems. Solved more than 250 problems on various platform. With time, I shifted towards web development and now I am working as A Trainee Software Engineer at V2 Technologies LTD. 
         </p>
       </div>
     </motion.div>
