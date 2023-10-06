@@ -7,6 +7,8 @@ import Hero from "../Components/Hero";
 import About from "../Components/About";
 import WorkExperience from "../Components/WorkExperience";
 import Skills from "../Components/Skills";
+import Certifications from "../Components/Certifications";
+import Projects from "../Components/Projects";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,14 +30,18 @@ export default function Home() {
         <About />
       </section>
       {/* Experience */}
-      <section id='experienced' className="snap-center">
-        <WorkExperience/>
+      <section id="experienced" className="snap-center">
+        <WorkExperience />
+      </section>
+      <section id="certifications" className="snap-center">
+        <Certifications />
       </section>
       {/* Skills */}
-      <section id='skills' className="snap-start">
-        <Skills/>
+      <section id="skills" className="snap-start">
+        <Skills />
       </section>
       {/* Projects  */}
+      <Projects />
       {/* Contact Me */}
     </div>
   );
