@@ -4,43 +4,29 @@ import React from "react";
 
 type Props = {};
 
-const certifications = [
-  {
-    id: 1,
-    image: "/assets/cer.jpg",
-    link: "/",
-    title: " Appreciation for achieving highest CGPA : Summer 2019",
-  },
+const projects = [
+  //   {
+  //     id: 1,
+  //     title: "eBabyCare",
+  //     image: "",
+  //     tech: ["React, Mui, Firebase, Mongodb Atlas"],
+  //     git: "",
+  //     deploy: "",
+  //   },
   {
     id: 2,
-    image: "/assets/4th.png",
-    link: "https://toph.co/c/4th-diu-swe-intra-2019-j/standings",
-    title:
-      "4th in 4th DIU-SWE Intra Department Programming Contest, Summer 2019 (Top 3%)",
+    title: "FeedBack App",
+    image: "/assets/feedback.png",
+    tech: ["React JS"],
+    git: "https://github.com/Shova24/feedback_app",
+    deploy: "",
   },
   {
     id: 3,
-    image: "/assets/9th.jpg",
-    link: "https://algo.codemarshal.org/contests/diu_iugpc_19",
-    title:
-      "9th in DIU Intra University Girls Programming Contest 2019 (Top 6%)",
-  },
-  {
-    id: 4,
-    image: "/assets/12th.png",
-    link: "https://toph.co/c/3rd-diu-swe-intra-2018-j/standings",
-    title:
-      "12th in 3rd DIU-SWE Intra Department Programming Contest, Spring 2019 (Top 11%)",
-  },
-];
-
-const projects = [
-  {
-    id: 1,
-    title: "eBabyCare",
-    image: "",
-    tech: ["React, Mui, Firebase, Mongodb Atlas"],
-    git: "",
+    title: "Coffee Queen",
+    image: "/assets/coffee.png",
+    tech: ["React JS"],
+    git: "https://github.com/Shova24/Coffee-Queen",
     deploy: "",
   },
 ];
@@ -55,7 +41,7 @@ function ProjectCard({}: Props) {
           w-[300px] md:w-[300px] xl:w-[400px]   h-[400px] md:h-[400px] xl:h-[400px] 
           snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 "
         >
-          <h3>{item.title}</h3>
+          <h3 className="text-xl font-bold">{item.title}</h3>
           <div className="w-[300px] md:w-[300px] xl:w-[300px]   h-[250px] md:h-[250px] xl:h-[250px] overflow-hidden">
             <Image
               src={item.image}
@@ -65,7 +51,12 @@ function ProjectCard({}: Props) {
               style={{ height: "150px" }}
             />
           </div>
-          <p className="font-light ">{item.title}</p>
+
+          <p>
+            <Link href={item.git}>
+              <span className="text-xl">Git link </span>
+            </Link>
+          </p>
         </article>
       ))}
     </>
