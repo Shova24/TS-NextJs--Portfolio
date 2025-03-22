@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-mandatory overflow-scroll z-0">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-mandatory overflow-y-scroll overflow-x-hidden z-0 ">
       <Head>
         <title>Shova&apos;s Portfolio</title>
       </Head>
@@ -41,8 +41,13 @@ export default function Home() {
         <Skills />
       </section>
       {/* Projects  */}
-      <Projects />
-      {/* Contact Me */}
+      {/* <Projects /> */}
+      {/* Contact Me
+       */}
+
+      <div className="h-[10lvh] py-10 px-4">
+        Work in progress ...
+      </div>
     </div>
   );
 }

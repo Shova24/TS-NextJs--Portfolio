@@ -76,17 +76,18 @@ function Skill({ directionLeft }: Props) {
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, x: 0 }}
             src={item.logo}
-            className="object-cover w-24 h-24 transition duration-300 ease-in-out border border-gray-500 rounded-full filter group-hover:grayscale"
+            className="relative z-[20] object-cover w-24 h-24 transition duration-300 ease-in-out border border-gray-500 rounded-full filter group-hover:grayscale group-hover:blur-[2px]  hover:opacity-100 opacity-80 hover:zoom-110"
           />
-          <div className="absolute opacity-0 group-hover:opacity-80">
-            <div className="flex items-center justify-center h-full">
-              <p className="text-3xl font-bold text-center text-black opacity-100">
+          <div className="absolute z-[30] inset-0 transition duration-300 ease-in-out rounded-full opacity-0 group-hover:opacity-80">
+            <div className="flex items-center justify-center h-full rounded-full bg-white/60">
+              <p className="relative z-[50] font-bold text-center opacity-100 text-black text-sm">
                 {item.name}
               </p>
             </div>
           </div>
-        </div>
-      ))}
+        </div >
+      ))
+      }
     </>
   );
 }

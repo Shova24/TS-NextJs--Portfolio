@@ -1,52 +1,75 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { experience } from "../utils/exp";
 
-type Props = {};
 
-function ExperienceCard({}: Props) {
+type Props = {
+  experience: {
+    id: string;
+    image: string;
+    title: string;
+    company: string;
+    skill: string[];
+    start: string;
+    end: string;
+    summary: string;
+  };
+  index: number;
+};
+
+function ExperienceCard({ experience, index }: Props) {
+
+
+
   return (
     <>
-      {experience.map((item) => (
-        <article
-          key={item.id}
-          className="flex flex-col rounded-lg items-center space-y-7 flex-shirk-0 w-[500px] md:w-[900px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 "
-        >
+
+      <article
+        key={experience.id}
+        className="flex flex-col rounded-lg items-center  space-y-7 flex-shirk-0 snap-center bg-[#292929] p-10 hover:opacity-100 opacity-80 cursor-pointer transition-opacity duration-200 h-[70lvh]"
+      >
+        <div className=" h-[25%] ">
           <motion.img
             initial={{
               y: -100,
               opacity: 0,
             }}
+            transition={{
+              duration: 1.2,
+              delay: 0.3 * parseInt(index.toString()),
+            }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.2 }}
-            className="w-32 h-32 mx-auto rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
-            src={item.image}
+            className="object-cover object-center w-32 h-32 mx-auto rounded-full"
+            src={experience.image}
             alt=""
           />
-          <div className="px-0 md:px-10">
-            <h4 className="text-4xl font-light">{item.title}</h4>
-            <p className="mt-1 text-2xl font-bold">{item.company}</p>
-            <div className="flex my-2 space-x-2">
-              {item.skill.map((icon, i) => (
-                <Icon key={i} icon={icon} className="w-10 h-10 rounded-full" />
-              ))}
-            </div>
-            <p>
-              <b>Start : </b>
-              {item.start}
-            </p>
-            <p>
-              <b>End : </b>
-              {item.end}
-            </p>
+        </div>
 
-            <p className="mt-5">{item.summary}</p>
+
+        <div className="px-0 md:px-10">
+          <h4 className="text-4xl font-light">{experience.title}</h4>
+          <p className="mt-1 text-2xl font-bold">{experience.company}</p>
+          <div className="flex my-2 space-x-2">
+            {experience.skill.map((icon, i) => (
+              <Icon key={i} icon={icon} className="w-10 h-10 rounded-full" />
+            ))}
           </div>
-        </article>
-      ))}
-      {/* <article className="flex flex-col rounded-lg items-center space-y-7 flex-shirk-0 w-[500px] md:w-[900px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 ">
+          <p>
+            <b>Start : </b>
+            {experience.start}
+          </p>
+          <p>
+            <b>End : </b>
+            {experience.end}
+          </p>
+
+          <p className="mt-5">{experience.summary}</p>
+        </div>
+
+      </article>
+
+      {/* <article className="flex flex-col rounded-lg items-center space-y-7 flex-shirk-0 w-[500px] md:w-[900px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-80 cursor-pointer transition-opacity duration-200 ">
         <motion.img
           initial={{
             y: -100,

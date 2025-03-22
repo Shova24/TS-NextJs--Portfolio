@@ -31,7 +31,7 @@ const projects = [
   },
 ];
 
-function ProjectCard({}: Props) {
+function ProjectCard({ }: Props) {
   return (
     <>
       {projects.map((item) => (
@@ -39,7 +39,7 @@ function ProjectCard({}: Props) {
           key={item.id}
           className="flex flex-col rounded-lg items-center space-y-5 flex-shirk-0 
           w-[300px] md:w-[300px] xl:w-[400px]   h-[400px] md:h-[400px] xl:h-[400px] 
-          snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 "
+          snap-center bg-[#292929] p-10 hover:opacity-100 opacity-80 cursor-pointer transition-opacity duration-200 "
         >
           <h3 className="text-xl font-bold">{item.title}</h3>
           <div className="w-[300px] md:w-[300px] xl:w-[300px]   h-[250px] md:h-[250px] xl:h-[250px] overflow-hidden">
